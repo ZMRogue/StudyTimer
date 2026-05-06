@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=devide-width" ,initial-scale="1.0" />
+    <title>Study Timer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Intro Screen -->
+      <div class="intro" id="introScreen">
+        <div class="intro-box">
+          <h1>📚 Welcome!</h1>
+          <p>Ready to focus today?</p>
+          <p class="intro-quote" id="introQuote">Loading inspiration...</p>
+          <button onclick="startApp()">Let's Start! 🚀</button>
+        </div>
+      </div>
+
+      <!-- Title -->
+      <h1>📚 Study Timer</h1>
+
+      <!-- Quote -->
+      <p class="quote" id="quote">Loading quote...</p>
+
+      <!-- Timer Display -->
+      <div class="timer" id="timer">25:00</div>
+
+      <!-- Session Counter -->
+      <div class="session-counter">
+        🎖️ Session Completed: <span id="sessionCount">0</span>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+
+      <!-- Dark/Light Toggle -->
+      <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">
+        🌙 Dark Mode
+      </button>
+
+      <!-- Status -->
+      <p class="status" id="status">🟢 Study Time!</p>
+
+      <!-- Settings -->
+      <div class="settings">
+        <label
+          >Study (min):
+          <input type="number" id="studyTime" value="25" min="1" max="120" />
+        </label>
+        <label
+          >Break (min):
+          <input type="number" id="breakTime" value="10" min="1" max="60" />
+        </label>
+      </div>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <button id="startBtn" onclick="startTimer()">▶️ Start</button>
+        <button id="pauseBtn" onclick="pauseTimer()">⏸️ Pause</button>
+        <button id="resetBtn" onclick="resetTimer()">Reset</button>
+      </div>
+
+      <!-- Music Section -->
+      <div class="music-section">
+        <h3>🎵 Study Music</h3>
+        <div class="music-buttons">
+          <button onclick="changeMusic('jfKfPfyJRdk')">☕ Lofi Hip Hop</button>
+          <button onclick="changeMusic('7NOSDKb0HlU')">🎧 Chillhop</button>
+          <button onclick="changeMusic('fsPRybb-xXg')">🌸 Spring Lofi</button>
+          <button onclick="changeMusic('qpDMy3V7ai8')">📚 Study Beats</button>
+          <button onclick="changeMusic('lTRiuFIWV54')">
+            🎹 Classical Sound
+          </button>
+          <button onclick="changeMusic('CQTnMlNaWYU')">🎻 Beethoven</button>
+          <button onclick="changeMusic('eap0oA46HPM')">
+            🎼 Best Classical
+          </button>
+        </div>
+        <iframe
+          id="musicPlayer"
+          width="100%"
+          height="200%"
+          src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=0"
+          title="Study Music"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

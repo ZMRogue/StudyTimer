@@ -1,0 +1,341 @@
+/* ── General Reset ────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f0f1a, #1a1a2e, #16213e);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+    color: white;
+}
+
+/* ── Container ───────────────────────── */
+.container {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 40px;
+    width: 100%;
+    max-width: 700px;
+    backdrop-filter: blur(10px);
+}
+
+/* ── Title ───────────────────────────── */
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #00d4ff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 20px rgba(0,212,255,0.5);
+}
+
+/* ── Quote ───────────────────────────── */
+.quote {
+    text-align: center;
+    font-style: italic;
+    color: #a0a0c0;
+    font-size: 0.95rem;
+    margin-bottom: 25px;
+    min-height: 50px;
+    line-height: 1.6;
+}
+
+.quote strong {
+    color: #00d4ff;
+    font-style: normal;
+}
+
+/* ── Timer Display ───────────────────── */
+.timer {
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    background: rgba(0,212,255,0.1);
+    border: 2px solid rgba(0,212,255,0.3);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 30px rgba(0,212,255,0.8);
+    letter-spacing: 5px;
+}
+
+/* ── Status ──────────────────────────── */
+.status {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    color: #80ff80;
+}
+
+/* ── Settings ────────────────────────── */
+.settings {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.settings label {
+    color: #a0a0c0;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.settings input {
+    width: 80px;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,212,255,0.3);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* ── Buttons ─────────────────────────── */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.buttons button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#startBtn {
+    background: linear-gradient(135deg, #00d4ff, #0099cc);
+    color: white;
+}
+
+#pauseBtn {
+    background: linear-gradient(135deg, #ff9500, #cc7700);
+    color: white;
+}
+
+#resetBtn {
+    background: linear-gradient(135deg, #ff4444, #cc0000);
+    color: white;
+}
+
+.buttons button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ── Progress Bar ────────────────────── */
+progress {
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* ── Music Section ───────────────────── */
+.music-section {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 25px;
+}
+
+.music-section h3 {
+    text-align: center;
+    color: #00d4ff;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.music-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.music-buttons button {
+    padding: 8px 16px;
+    border: 1px solid rgba(0,212,255,0.3);
+    border-radius: 20px;
+    background: rgba(0,212,255,0.1);
+    color: white;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.music-buttons button:hover {
+    background: rgba(0,212,255,0.3);
+    transform: translateY(-2px);
+}
+
+/* ── Progress Bar ────────────────────── */
+.progress-container {
+    width: 100%;
+    height: 12px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #00d4ff, #0099cc);
+    border-radius: 10px;
+    transition: width 1s linear;
+}
+
+/* ── Theme Toggle Button ─────────────── */
+.theme-toggle {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 8px 20px;
+    border: 1px solid rgba(0,212,255,0.3);
+    border-radius: 20px;
+    background: rgba(0,212,255,0.1);
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: rgba(0,212,255,0.3);
+}
+
+/* ── Light Mode ──────────────────────── */
+body.light-mode {
+    background: linear-gradient(135deg, #e8f4f8, #d1ecf1, #bee5eb);
+    color: #1a1a2e;
+}
+
+body.light-mode .container {
+    background: rgba(255,255,255,0.8);
+    border: 1px solid rgba(0,150,200,0.3);
+}
+
+body.light-mode .timer {
+    color: #1a1a2e;
+    background: rgba(0,150,200,0.1);
+    border: 2px solid rgba(0,150,200,0.3);
+}
+
+body.light-mode .settings input {
+    background: rgba(0,0,0,0.1);
+    color: #1a1a2e;
+    border: 1px solid rgba(0,150,200,0.3);
+}
+
+body.light-mode .music-buttons button {
+    color: #1a1a2e;
+}
+
+body.light-mode .session-counter {
+    color: #1a1a2e;
+}
+
+body.light-mode .quote {
+    color: #444466;
+}
+
+/* ── Intro Screen ────────────────────── */
+.intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0f0f1a, #1a1a2e, #16213e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.intro-box {
+    text-align: center;
+    padding: 60px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(0,212,255,0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.intro-box h1 {
+    font-size: 3rem;
+    color: #00d4ff;
+    margin-bottom: 15px;
+}
+
+.intro-box p {
+    color: #a0a0c0;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.intro-quote {
+    font-style: italic;
+    font-size: 0.95rem !important;
+    min-height: 40px;
+    margin-bottom: 30px !important;
+}
+
+.intro-box button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #00d4ff, #0099cc);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.intro-box button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0,212,255,0.4);
+}
+
+/* ── Session Counter ─────────────────── */
+.session-counter {
+    text-align: center;
+    color: #a0a0c0;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(0,212,255,0.2);
+}
+
+.session-counter span {
+    color: #00d4ff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* ── YouTube Player ──────────────────── */
+iframe {
+    border-radius: 12px;
+    border: 1px solid rgba(0,212,255,0.2);
+}
