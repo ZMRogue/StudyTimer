@@ -13,13 +13,13 @@ A beautiful web-based study timer to help you stay focused and productive!
 - 📖 Welcome intro screen
 
 ## 🎵 Music Options
-- ☕ Lofi Hip Hop
+- ☕ Lofi Hip Hop (Lofi Girl)
 - 🎧 Chillhop
 - 🌸 Spring Lofi
 - 📚 Study Beats
-- 🎹 Mozart
+- 🎼 Classical Sound
 - 🎻 Beethoven
-- 🎼 Best Classical
+- 🎵 Best Classical
 
 ## 🚀 How to Use
 1. Open `index.html` in any browser
